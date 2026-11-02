@@ -53,6 +53,63 @@ alter table agents DROP column map;
 
 alter table agents MODIFY COLUMN Win_rate DECIMAL(6,2) not null;
 
+create table Maps (
+    Map_Id Varchar(23) PRIMARY key NOT NULL,
+    Map_Name VARCHAR(20) not NULL UNIQUE,
+    Location VARCHAR(20) not null,
+    Attack_Rate DECIMAL(6,4) not NULL,
+    Defence_Rate DECIMAL(6,4) NOT NULL,
+    Most_Used_Duelist VARCHAR(23) not NULL,
+    Most_Used_Controller VARCHAR(23) not NULL,
+    Most_Used_Initiator VARCHAR(23) not NULL,
+    Most_Used_Sentinel VARCHAR(23) not NULL
+);
 
 
+INSERT into Maps VALUE("MP1001",'Ascent','Venice',46.05,53.67,'Jett','Omen','Sova','Cypher');
+alter TABLE maps MODIFY COLUMN Attack_rate decimal(6,2);
+alter TABLE maps MODIFY COLUMN Defence_rate decimal(6,2);
+select * from Maps;
 
+
+alter table maps add column Vct_Pick_rate decimal(6,3) not null;
+alter TABLE maps MODIFY COLUMN Vct_Pick_rate decimal(6,2);
+
+update maps set Vct_Pick_rate = 45.03 where Map_id="MP1001";
+
+INSERT INTO Maps VALUES
+('MP1002','Bind','Morocco',48.25,51.75,
+ 'Raze','Brimstone','Skye','Cypher',52.30),
+
+('MP1003','Haven','Bhutan',49.50,50.50,
+ 'Yoru','Omen','Sova','Chamber',48.25),
+
+('MP1004','Split','Japan',50.20,49.80,
+ 'Neon','Astra','Breach','Sage',51.75),
+
+('MP1005','Icebox','Russia',48.80,51.20,
+ 'Reyna','Viper','KAY/O','Killjoy',47.65),
+
+('MP1006','Breeze','Atlantic',51.20,48.80,
+ 'Phoenix','Harbor','Fade','Deadlock',49.80),
+
+('MP1007','Fracture','USA',49.30,50.70,
+ 'Iso','Clove','Gekko','Vyse',46.25),
+
+('MP1008','Pearl','Portugal',50.10,49.90,
+ 'Waylay','Miks','Tejo','Veto',50.50),
+
+('MP1009','Lotus','India',49.80,50.20,
+ 'Jett','Omen','Sova','Cypher',53.20),
+
+('MP1010','Sunset','Los Angeles',50.50,49.50,
+ 'Raze','Brimstone','Skye','Killjoy',54.25),
+
+('MP1011','Abyss','Norway',48.90,51.10,
+ 'Hush','Viper','Fade','Chamber',51.30),
+
+('MP1012','Corrode','France',49.60,50.40,
+ 'Neon','Harbor','Breach','Sage',52.70),
+
+('MP1013','Summit','China',50.30,49.70,
+ 'Yoru','Miks','KAY/O','Deadlock',55.20);
