@@ -29,3 +29,6 @@ UPDATE agents SET Best_Map = 'Ascent' WHERE Name = 'Waylay';
 UPDATE agents SET Best_Map = 'Bind' WHERE Name = 'Veto';
 UPDATE agents SET Best_Map = 'Haven' WHERE Name = 'Miks';
 UPDATE agents SET Best_Map = 'Summit' WHERE Name = 'Hush';
+
+select * from agents where name like "%e%";
+
