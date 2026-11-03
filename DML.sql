@@ -30,5 +30,49 @@ UPDATE agents SET Best_Map = 'Bind' WHERE Name = 'Veto';
 UPDATE agents SET Best_Map = 'Haven' WHERE Name = 'Miks';
 UPDATE agents SET Best_Map = 'Summit' WHERE Name = 'Hush';
 
-select * from agents where name like "%e%";
+select * from agents where name like "%m%";
 
+select * from maps;
+-- wrote this after getting the idea that two tables can be joined using map as base
+
+
+UPDATE Agents SET Best_Map = 'MP1001' WHERE Name = 'Jett';      -- Ascent
+UPDATE Agents SET Best_Map = 'MP1002' WHERE Name = 'Raze';      -- Bind
+UPDATE Agents SET Best_Map = 'MP1002' WHERE Name = 'Brimstone'; -- Bind
+UPDATE Agents SET Best_Map = 'MP1002' WHERE Name = 'Skye';     -- Bind
+UPDATE Agents SET Best_Map = 'MP1002' WHERE Name = 'Cypher';   -- Bind
+
+UPDATE Agents SET Best_Map = 'MP1003' WHERE Name = 'Yoru';     -- Haven
+UPDATE Agents SET Best_Map = 'MP1003' WHERE Name = 'Omen';     -- Haven
+UPDATE Agents SET Best_Map = 'MP1003' WHERE Name = 'Sova';     -- Haven
+UPDATE Agents SET Best_Map = 'MP1003' WHERE Name = 'Chamber';  -- Haven
+
+UPDATE Agents SET Best_Map = 'MP1004' WHERE Name = 'Neon';     -- Split
+UPDATE Agents SET Best_Map = 'MP1004' WHERE Name = 'Astra';    -- Split
+UPDATE Agents SET Best_Map = 'MP1004' WHERE Name = 'Breach';   -- Split
+UPDATE Agents SET Best_Map = 'MP1004' WHERE Name = 'Sage';     -- Split
+
+UPDATE Agents SET Best_Map = 'MP1005' WHERE Name = 'Reyna';    -- Icebox
+UPDATE Agents SET Best_Map = 'MP1005' WHERE Name = 'Viper';    -- Icebox
+UPDATE Agents SET Best_Map = 'MP1005' WHERE Name = 'KAY/O';    -- Icebox
+UPDATE Agents SET Best_Map = 'MP1005' WHERE Name = 'Killjoy';  -- Icebox
+
+UPDATE Agents SET Best_Map = 'MP1006' WHERE Name = 'Phoenix';  -- Breeze
+UPDATE Agents SET Best_Map = 'MP1006' WHERE Name = 'Harbor';   -- Breeze
+UPDATE Agents SET Best_Map = 'MP1006' WHERE Name = 'Fade';     -- Breeze
+UPDATE Agents SET Best_Map = 'MP1006' WHERE Name = 'Deadlock'; -- Breeze
+
+UPDATE Agents SET Best_Map = 'MP1007' WHERE Name = 'Iso';      -- Fracture
+UPDATE Agents SET Best_Map = 'MP1007' WHERE Name = 'Clove';    -- Fracture
+UPDATE Agents SET Best_Map = 'MP1007' WHERE Name = 'Gekko';    -- Fracture
+UPDATE Agents SET Best_Map = 'MP1007' WHERE Name = 'Vyse';     -- Fracture
+
+UPDATE Agents SET Best_Map = 'MP1008' WHERE Name = 'Waylay';   -- Pearl
+UPDATE Agents SET Best_Map = 'MP1008' WHERE Name = 'Miks';     -- Pearl
+UPDATE Agents SET Best_Map = 'MP1008' WHERE Name = 'Tejo';     -- Pearl
+UPDATE Agents SET Best_Map = 'MP1008' WHERE Name = 'Veto';     -- Pearl
+
+UPDATE Agents SET Best_Map = 'MP1011' WHERE Name = 'Hush';     -- Abyss
+
+alter table agents rename column agent_win_rate to Agent_win_rate;
+alter table maps rename column vct_pick_rate to Map_Pick_Rate;
