@@ -113,3 +113,8 @@ INSERT INTO Maps VALUES
 
 ('MP1013','Summit','China',50.30,49.70,
  'Yoru','Miks','KAY/O','Deadlock',55.20);
+
+-- check can be used to verify and make sure that the correct values are entered
+
+alter table maps add constraint check (attack_rate>0);
+alter table maps add constraint check (defence_rate>0);
