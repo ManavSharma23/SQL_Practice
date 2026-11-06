@@ -76,3 +76,5 @@ UPDATE Agents SET Best_Map = 'MP1011' WHERE Name = 'Hush';     -- Abyss
 
 alter table agents rename column agent_win_rate to Agent_win_rate;
 alter table maps rename column vct_pick_rate to Map_Pick_Rate;
+
+update agents set country ="Null" where name in ("Omen","vyse","KAY/O");

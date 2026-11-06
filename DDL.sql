@@ -118,3 +118,10 @@ INSERT INTO Maps VALUES
 
 alter table maps add constraint check (attack_rate>0);
 alter table maps add constraint check (defence_rate>0);
+
+ALTER TABLE Agents
+ADD CONSTRAINT fk_best_map
+FOREIGN KEY (Best_Map)
+REFERENCES Maps(Map_ID);
+
+desc agents;
