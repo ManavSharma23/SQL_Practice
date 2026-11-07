@@ -48,13 +48,3 @@ on
     agents.best_map=maps.map_id
 where 
     agents.country="null";
-
-
-
-
-
-
-
-
-
-

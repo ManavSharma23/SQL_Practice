@@ -19,5 +19,16 @@ select id,name,country from agents where agent_win_rate>53 order by FIELD(role,'
 
 select id,name,country,ceil(agent_win_rate) from agents where role="duelist" and country in ('japan');     -- ceil nearest above, nearest below - 52.4=52
 
+-- auto-commit and transaction
+-- we set autocommit to 0 , as a result all the changes we have made will not be confirmed untill we write commit and if we want to go back we write ROLLBACK
 
+set autocommit=0;
+rollback;    -- until here all have been rollbacked 
+update agents set id=1 where name = "jett";
+select * from agents;
+
+update agents set agent_win_rate=53.98 where id=30;
+COMMIT;
+
+-- union - combine two results but removes duplicates where as union all combines all even duplicates
 
