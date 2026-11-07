@@ -124,4 +124,4 @@ ADD CONSTRAINT fk_best_map
 FOREIGN KEY (Best_Map)
 REFERENCES Maps(Map_ID);
 
-desc agents;
+desc agents; 
