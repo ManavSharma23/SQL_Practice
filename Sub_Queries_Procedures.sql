@@ -1,3 +1,42 @@
+-- SELECT *: Displays all columns and records from a table
+
+-- WHERE: Filters records based on a condition
+
+-- Subquery: A query written inside another query
+
+-- AVG(): Calculates the average of a column
+
+-- ORDER BY: Sorts the result in ascending (ASC) or descending (DESC) order
+
+-- DESC: Sorts results in descending order
+
+-- INNER JOIN: Combines matching records from two tables
+
+-- AS: Gives a temporary alias to a table or column
+
+-- ON: Specifies the condition for joining two tables
+
+-- AND: Returns records only when both conditions are true
+
+-- OR: Returns records when at least one condition is true
+
+-- GROUP BY: Groups records having the same values
+
+-- HAVING: Filters grouped records based on aggregate conditions
+
+-- COUNT(): Counts the number of records
+
+-- SUM(): Calculates the total of a column
+
+-- MIN(): Returns the smallest value
+
+-- MAX(): Returns the largest value
+
+-- DISTINCT: Removes duplicate values
+
+
+
+
 select * from agents;
 select * from maps;
 

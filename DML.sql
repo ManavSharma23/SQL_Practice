@@ -1,3 +1,9 @@
+-- INSERT: Adds new records into a table
+-- UPDATE: Modifies existing records
+-- DELETE: Deletes existing records
+-- SELECT: Retrieves data from a table
+
+
 select * from agents;
 UPDATE agents set Best_map ='Icebox' where Name ='Killjoy';
 UPDATE agents SET Best_Map = 'Ascent' WHERE Name = 'Jett';

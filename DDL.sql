@@ -1,3 +1,22 @@
+-- DDL (Data Definition Language)
+-- Used to create, modify and delete database structures.
+
+-- CREATE DATABASE: Creates a new database
+-- USE: Selects a database to work on
+-- CREATE TABLE: Creates a new table
+-- ALTER TABLE ADD: Adds a new column to an existing table
+-- ALTER TABLE MODIFY: Changes the datatype or constraints of a column
+-- ALTER TABLE DROP COLUMN: Removes a column from a table
+-- ALTER TABLE ADD CONSTRAINT: Adds a constraint (PRIMARY KEY, FOREIGN KEY, CHECK, UNIQUE)
+-- DROP TABLE: Deletes an entire table and its structure
+-- DROP DATABASE: Deletes an entire database
+-- TRUNCATE TABLE: Deletes all records but keeps the table structure
+-- RENAME TABLE: Renames an existing table
+-- DESC: Displays the structure of a table
+
+
+
+
 create database Valorant;
 use Valorant;
 create table Agents
