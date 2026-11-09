@@ -1,3 +1,64 @@
+-- BASIC QUERIES
+
+-- SELECT *: Retrieves all columns and records from a table
+
+-- SELECT column_name: Retrieves only specified columns
+
+-- FROM: Specifies the table from which data is retrieved
+
+-- WHERE: Filters records based on a condition
+
+-- Comparison Operators:
+-- =  Equal to
+-- != or <>  Not equal to
+-- >  Greater than
+-- <  Less than
+-- >= Greater than or equal to
+-- <= Less than or equal to
+
+-- AND: Returns records when all conditions are true
+
+-- OR: Returns records when at least one condition is true
+
+-- NOT: Reverses a condition
+
+-- ORDER BY: Sorts the result
+-- ASC: Sorts in ascending order (default)
+-- DESC: Sorts in descending order
+
+-- GROUP BY: Groups records having the same values
+
+-- SUM(): Calculates the total of a column
+
+-- COUNT(): Counts the number of records
+
+-- AVG(): Calculates the average of a column
+
+-- MIN(): Returns the smallest value
+
+-- MAX(): Returns the largest value
+
+-- AS: Gives a temporary alias to a column or table
+
+-- HAVING: Filters grouped records based on aggregate conditions
+
+-- DISTINCT: Removes duplicate records from the result
+
+-- LIMIT: Restricts the maximum number of records returned
+
+-- Query Execution Order (simplified):
+-- FROM
+-- WHERE
+-- GROUP BY
+-- HAVING
+-- SELECT
+-- DISTINCT
+-- ORDER BY
+-- LIMIT
+
+
+
+
 -- Basic Queries 
 
 -- Select Everything 
