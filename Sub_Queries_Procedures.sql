@@ -1,3 +1,6 @@
+select * from agents;
+select * from maps;
+
 -- above avg win rate
 
 select 
@@ -40,3 +43,13 @@ on
 where 
 
     map_id = (select best_map from agents group by best_map order by count(*) desc limit 1) order by agent_win_rate desc;
+
+SELECT map_name, COUNT(*) AS total
+FROM maps
+WHERE map_pick_rate > (SELECT AVG(map_pick_rate) FROM maps)
+GROUP BY map_name;
+
+SELECT COUNT(*) AS total_maps
+FROM maps
+WHERE map_pick_rate > (SELECT AVG(map_pick_rate) FROM maps);
+
