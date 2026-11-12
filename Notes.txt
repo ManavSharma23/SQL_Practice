@@ -1,0 +1,57 @@
+-- additional notes 
+
+-- IF AND ELSE
+
+-- DELIMITER //
+CREATE PROCEDURE check_agent(IN agent_name VARCHAR(30))
+
+BEGIN
+    DECLARE rate DECIMAL(5,2);
+    SELECT Win_rate INTO rate
+    FROM Agents
+    WHERE Name = agent_name;
+    IF rate > 50 THEN
+        SELECT 'Good Win Rate';
+    ELSEIF rate = 50 THEN
+        SELECT 'Average Win Rate';
+    ELSE
+        SELECT 'Low Win Rate';
+    END IF;
+END //
+DELIMITER ;
+_____________________________________________________________________________
+
+ -- LOOP
+
+ DELIMITER //
+CREATE PROCEDURE myloop()
+BEGIN
+    DECLARE i INT DEFAULT 1;
+    WHILE i <= 5 DO
+      SELECT i;
+        SET i = i + 1;
+    END WHILE;
+END //
+DELIMITER ;
+
+_____________________________________________________________________________
+
+-- LOOP + IF ELSE
+
+DELIMITER //
+CREATE PROCEDURE q2()
+BEGIN
+    DECLARE i INT DEFAULT 1;
+    WHILE i <= 20 DO
+        IF i % 2 = 0 THEN
+            SELECT i;
+        END IF;
+
+        SET i = i + 1;
+    END WHILE;
+END //
+
+DELIMITER ;
+CALL q2();
+
+_____________________________________________________________________________
