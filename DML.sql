@@ -1,9 +1,3 @@
--- INSERT: Adds new records into a table
--- UPDATE: Modifies existing records
--- DELETE: Deletes existing records
--- SELECT: Retrieves data from a table
-
-
 select * from agents;
 UPDATE agents set Best_map ='Icebox' where Name ='Killjoy';
 UPDATE agents SET Best_Map = 'Ascent' WHERE Name = 'Jett';
@@ -82,5 +76,3 @@ UPDATE Agents SET Best_Map = 'MP1011' WHERE Name = 'Hush';     -- Abyss
 
 alter table agents rename column agent_win_rate to Agent_win_rate;
 alter table maps rename column vct_pick_rate to Map_Pick_Rate;
-
-update agents set country ="Null" where name in ("Omen","vyse","KAY/O");
