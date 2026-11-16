@@ -1,4 +1,4 @@
--- count,min,max,sum
+-- functions
 select * from maps;
 select * from agents;
 select COUNT(map_id) from maps where map_id="mp1001";
@@ -13,7 +13,9 @@ select best_map, count(*) from agents GROUP by best_map;
 
 select name ,substring(best_map,3,6) from agents;
 
+
 select name,locate('a',name) as position_of_a from agents;
+
 
 select id,name,country from agents where agent_win_rate>53 order by FIELD(role,'Duelist','Controller','sentinel','initiator'),id ;
 
